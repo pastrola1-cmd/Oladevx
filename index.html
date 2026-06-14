@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Page Information -->
+  <title>OLADEVX | Software Engineer, Product Architect & Founder</title>
+  <meta name="description" content="Olamide Emmanuel Stephen (OLADEVX) - Software Engineer & Product Architect building systems that help businesses scale through automation, digital transformation, and modern tech.">
+  <meta name="keywords" content="Olamide Emmanuel Stephen, OLADEVX, Software Engineer Nigeria, Product Architect Africa, Scalewealth Estate, SchoolOS, Business Automation, Tech Founder">
+  
+  <!-- Favicon placeholder (Uses high quality SVG inline) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0b11'/%3E%3Cpath d='M30 30h40v10H40v10h30v10H40v10h30v10H30z' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236c63ff'/%3E%3Cstop offset='100%25' stop-color='%2300d4aa'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E">
+  
+  <!-- Icons stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Design CSS -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Trail (Desktop only) -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Ambient Global Background Graphics -->
+  <div class="bg-decorations">
+    <div class="bg-dot-grid"></div>
+    <div class="bg-orb bg-orb-primary animate-orb-1" style="top: 10%; left: -10%;"></div>
+    <div class="bg-orb bg-orb-secondary animate-orb-2" style="top: 50%; right: -10%;"></div>
+    <div class="bg-orb bg-orb-primary animate-orb-1" style="bottom: -10%; left: 30%;"></div>
+  </div>
+
+  <!-- ==========================================================================
+     Header & Navigation Bar
+     ========================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        OLADEVX<span>.</span>
+      </a>
+      
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#founder-os" class="nav-link">Founder OS</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+          <li><a href="#tech" class="nav-link">Tech Stack</a></li>
+          <li><a href="#blog" class="nav-link">Thought Leadership</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="btn btn-secondary btn-sm">Let's Talk</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+     1. Hero Section
+     ========================================================================== -->
+  <section id="hero" class="hero">
+    <canvas id="hero-particles" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index: 1;"></canvas>
+    <div class="container hero-content">
+      <div class="hero-tags reveal-on-scroll">
+        <span class="hero-tag">Software Engineer</span>
+        <span class="hero-tag">Product Architect</span>
+        <span class="hero-tag">Founder</span>
+      </div>
+      <h1 class="reveal-on-scroll delay-100">
+        Engineering Software That <br>
+        <span class="text-gradient typewriter-text typewriter-cursor" data-text="Helps Businesses Grow"></span>
+      </h1>
+      <p class="reveal-on-scroll delay-200">
+        I'm Olamide Emmanuel Stephen, a software engineer and product architect building digital products that streamline operations, improve efficiency, and create new opportunities for businesses across Africa.
+      </p>
+      <div class="hero-ctas reveal-on-scroll delay-300">
+        <a href="#products" class="btn btn-primary">
+          Explore My Work <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          Let's Talk <i class="far fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     2. Founder Snapshot (About Section)
+     ========================================================================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="grid-2 snapshot-grid">
+        
+        <!-- Snapshot visual representation -->
+        <div class="snapshot-visual reveal-on-scroll">
+          <div class="snapshot-img-container">
+            <img src="assets/founder.png" alt="Olamide Emmanuel Stephen - OLADEVX Founder" class="snapshot-img">
+          </div>
+          <div class="snapshot-img-decor"></div>
+        </div>
+        
+        <!-- Snapshot bio and description -->
+        <div class="snapshot-bio reveal-on-scroll delay-200">
+          <span class="badge">About The Founder</span>
+          <h2>Meet Olamide Emmanuel Stephen</h2>
+          <p>
+            Olamide Emmanuel Stephen is a software engineer, founder, and product builder focused on creating practical technology solutions for African businesses. His work spans real estate technology, education systems, business automation, and SaaS products designed to solve real operational challenges.
+          </p>
+          <p>
+            Instead of just writing code, he approaches development from a business-first perspective, creating architectures that can handle rapid growth while reducing complexity.
+          </p>
+          
+          <!-- Animated Stats grid -->
+          <div class="snapshot-stats">
+            <div class="glass-panel stat-card">
+              <span class="stat-number" data-target="5" data-suffix="+">0</span>
+              <span class="stat-label">Products Built</span>
+            </div>
+            <div class="glass-panel stat-card">
+              <span class="stat-number" data-target="3" data-suffix="+">0</span>
+              <span class="stat-label">Active Ventures</span>
+            </div>
+            <div class="glass-panel stat-card">
+              <span class="stat-number" data-target="50" data-suffix="+">0</span>
+              <span class="stat-label">Clients Served</span>
+            </div>
+            <div class="glass-panel stat-card">
+              <span class="stat-number" data-target="4" data-suffix="+">0</span>
+              <span class="stat-label">Years Building</span>
+            </div>
+          </div>
+          
+          <!-- Philosophy Quote -->
+          <div class="glass-panel philosophy-card">
+            <blockquote>"Technology should not complicate business. It should simplify it."</blockquote>
+            <p style="font-size: 0.95rem; margin-top: 0.5rem; color: var(--text-muted);">
+              My mission is to design software that removes friction, automates repetitive work, and enables organizations to focus on growth.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     3. Founder OS Section (Timeline / Ecosystem Mapping)
+     ========================================================================== -->
+  <section id="founder-os" class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="badge badge-green">Founder OS</span>
+        <h2>The Venture Ecosystem</h2>
+        <p>A systems-level overview of proprietary SaaS platforms and future business automation infrastructures engineered to remove operational friction.</p>
+      </div>
+      
+      <div class="os-container">
+        
+        <!-- Interactive Venture list -->
+        <div class="os-column reveal-on-scroll">
+          
+          <!-- Current Ventures -->
+          <div class="os-header-block">
+            <h3><i class="fas fa-check-circle" style="color: var(--accent-secondary);"></i> Active Holdings</h3>
+            <p>Production systems actively generating enterprise value and driving revenue.</p>
+          </div>
+          
+          <div class="os-ventures-grid">
+            
+            <div class="glass-panel os-card">
+              <div class="os-status-indicator indicator-current pulse-indicator-green"></div>
+              <h4 class="os-card-title">Scalewealth Estate <span class="os-tag-current">✓ Active</span></h4>
+              <p class="os-card-desc">Advanced real estate automation portal facilitating simplified property management, automated tenant billing and portfolio reporting.</p>
+              <div class="os-card-footer">
+                <span class="os-card-role">Co-Founder & Architect</span>
+                <a href="#products" class="os-card-link">View Details <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            
+            <div class="glass-panel os-card">
+              <div class="os-status-indicator indicator-current pulse-indicator-green"></div>
+              <h4 class="os-card-title">SchoolOS <span class="os-tag-current">✓ Active</span></h4>
+              <p class="os-card-desc">An all-in-one educational enterprise solution designed to automate enrollment processes, finance tracking, and parent communication.</p>
+              <div class="os-card-footer">
+                <span class="os-card-role">Founder & Lead Engineer</span>
+                <a href="#products" class="os-card-link">View Details <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            
+            <div class="glass-panel os-card">
+              <div class="os-status-indicator indicator-current pulse-indicator-green"></div>
+              <h4 class="os-card-title">DevLoop <span class="os-tag-current">✓ Active</span></h4>
+              <p class="os-card-desc">Advanced productivity toolset, workflow utilities, and developer extensions meant to streamline the software delivery pipeline.</p>
+              <div class="os-card-footer">
+                <span class="os-card-role">Architect & Creator</span>
+                <a href="#products" class="os-card-link">View Details <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- Future Ventures -->
+          <div class="os-header-block" style="margin-top: 3rem;">
+            <h3><i class="fas fa-compass" style="color: #fbbf24;"></i> Under Development</h3>
+            <p>Upcoming architectures designed to automate financial pipelines and machine learning operations.</p>
+          </div>
+          
+          <div class="os-ventures-grid">
+            
+            <div class="glass-panel os-card">
+              <div class="os-status-indicator indicator-future pulse-indicator-amber"></div>
+              <h4 class="os-card-title">Fintech infrastructure <span class="os-tag-future">□ Planned</span></h4>
+              <p class="os-card-desc">Localized payment aggregation gateway offering micro-payment billing loops for subscription startups across West Africa.</p>
+              <div class="os-card-footer">
+                <span class="os-card-role">Architect</span>
+                <span style="color: var(--text-muted); font-size: 0.85rem;">Q4 2026</span>
+              </div>
+            </div>
+            
+            <div class="glass-panel os-card">
+              <div class="os-status-indicator indicator-future pulse-indicator-amber"></div>
+              <h4 class="os-card-title">AI Infrastructure <span class="os-tag-future">□ Planned</span></h4>
+              <p class="os-card-desc">Integration nodes translating regional business datasets into actionable training weights for customer support bots.</p>
+              <div class="os-card-footer">
+                <span class="os-card-role">Lead Dev</span>
+                <span style="color: var(--text-muted); font-size: 0.85rem;">Q1 2027</span>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <!-- Sidebar layout showing ecosystem timeline -->
+        <div class="os-sidebar-column reveal-on-scroll delay-200">
+          <div class="glass-panel os-sidebar">
+            <h3 class="os-sidebar-title text-gradient">Development Roadmap</h3>
+            
+            <div class="os-map-list">
+              <div class="os-map-item">
+                <div class="os-map-dot active"></div>
+                <div class="os-map-content">
+                  <span class="os-map-name">Scalewealth Estate</span>
+                  <span class="os-map-status">Launched. Currently scaling.</span>
+                </div>
+              </div>
+              
+              <div class="os-map-item">
+                <div class="os-map-dot active"></div>
+                <div class="os-map-content">
+                  <span class="os-map-name">SchoolOS Enterprise</span>
+                  <span class="os-map-status">Launched. Servicing private institutes.</span>
+                </div>
+              </div>
+              
+              <div class="os-map-item">
+                <div class="os-map-dot active"></div>
+                <div class="os-map-content">
+                  <span class="os-map-name">DevLoop Utilities</span>
+                  <span class="os-map-status">Beta release. Core logic verified.</span>
+                </div>
+              </div>
+              
+              <div class="os-map-item">
+                <div class="os-map-dot"></div>
+                <div class="os-map-content">
+                  <span class="os-map-name">Fintech Gateway</span>
+                  <span class="os-map-status">Conceptual architecture review.</span>
+                </div>
+              </div>
+              
+              <div class="os-map-item">
+                <div class="os-map-dot"></div>
+                <div class="os-map-content">
+                  <span class="os-map-name">AI Localized Agents</span>
+                  <span class="os-map-status">Research & dataset gathering.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     4. Featured Products (Product Ecosystem Section)
+     ========================================================================== -->
+  <section id="products" class="section">
+    <div class="container ecosystem-container">
+      <div class="section-header reveal-on-scroll">
+        <span class="badge">Featured Products</span>
+        <h2>Engineering In Action</h2>
+        <p>Deep-dives into active platforms handling high transaction volume and operational workloads.</p>
+      </div>
+      
+      <div class="product-carousel reveal-on-scroll delay-100">
+        
+        <!-- Product Card 1 -->
+        <div class="glass-panel product-card">
+          <div class="product-media">
+            <img src="assets/scalewealth.png" alt="Scalewealth Estate dashboard layout" class="product-img">
+            <div class="product-media-overlay">
+              <a href="#case-studies" class="btn btn-secondary btn-sm">Read Case Study</a>
+            </div>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Scalewealth Estate</h3>
+            <p class="product-desc">
+              A comprehensive property management platform built to automate tenant relations, payments, and lease agreements. It simplifies complex real estate bookkeeping tasks.
+            </p>
+            <div class="product-tags">
+              <span class="product-tag">Next.js</span>
+              <span class="product-tag">PostgreSQL</span>
+              <span class="product-tag">Supabase</span>
+              <span class="product-tag">Node.js</span>
+            </div>
+            <div class="product-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Status: Active/Scaling</span>
+              <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.4rem 1rem;">Launch App <i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Card 2 -->
+        <div class="glass-panel product-card">
+          <div class="product-media">
+            <img src="assets/schoolos.png" alt="SchoolOS dashboard layout" class="product-img">
+            <div class="product-media-overlay">
+              <a href="#case-studies" class="btn btn-secondary btn-sm">Read Case Study</a>
+            </div>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">SchoolOS</h3>
+            <p class="product-desc">
+              Complete education administration suite automating student records, parent notifications, fee receipts, and digital portal logins for educational institutions.
+            </p>
+            <div class="product-tags">
+              <span class="product-tag">TypeScript</span>
+              <span class="product-tag">FastAPI</span>
+              <span class="product-tag">PostgreSQL</span>
+              <span class="product-tag">React</span>
+            </div>
+            <div class="product-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Status: Active/Live</span>
+              <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.4rem 1rem;">Launch App <i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Card 3 -->
+        <div class="glass-panel product-card">
+          <div class="product-media">
+            <img src="assets/devloop.png" alt="DevLoop developer utility layout" class="product-img">
+            <div class="product-media-overlay">
+              <span style="color: #fff; font-weight: 600;">Beta Testing</span>
+            </div>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">DevLoop</h3>
+            <p class="product-desc">
+              Developer-centric utility library designed to speed up setup steps, deployment pipelines, and database modeling inside JavaScript and Python environments.
+            </p>
+            <div class="product-tags">
+              <span class="product-tag">TypeScript</span>
+              <span class="product-tag">Rust</span>
+              <span class="product-tag">WebAssembly</span>
+              <span class="product-tag">Node</span>
+            </div>
+            <div class="product-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Status: Beta</span>
+              <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.4rem 1rem;">Get Code <i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     5. Services Section
+     ========================================================================== -->
+  <section id="services" class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="badge">Capabilities</span>
+        <h2>How I Help Businesses Scale</h2>
+        <p>Designing and deploying enterprise-grade digital systems that automate operational loops, reduce overhead, and scale seamlessly.</p>
+      </div>
+      
+      <div class="grid-3 reveal-on-scroll delay-100">
+        
+        <!-- Service 1 -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3 class="service-title">Software Engineering</h3>
+          <p class="service-desc">
+            Constructing performant web, mobile, and API layers using modern frameworks. Codebases are designed to be clean, modular, and easily testable.
+          </p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">
+            <i class="fas fa-gears"></i>
+          </div>
+          <h3 class="service-title">Business Automation</h3>
+          <p class="service-desc">
+            Automating tedious spreadsheet entry, customer billing, and cross-platform notification pipelines to free up operational hours.
+          </p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">
+            <i class="fas fa-cubes"></i>
+          </div>
+          <h3 class="service-title">Product Architecture</h3>
+          <p class="service-desc">
+            Designing database schemas, cloud infrastructure layouts, and software blueprints for SaaS products from prototype to production.
+          </p>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h3 class="service-title">Digital Transformation</h3>
+          <p class="service-desc">
+            Modernizing legacy spreadsheets, paper documents, and email chains into secure, database-backed web portals that are easy for staff to use.
+          </p>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="service-title">Technical Consulting</h3>
+          <p class="service-desc">
+            Providing audit reviews on codebases, advisory notes on cloud costs, and third-party API integration plans for development teams.
+          </p>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">
+            <i class="fas fa-puzzle-piece"></i>
+          </div>
+          <h3 class="service-title">API & Integrations</h3>
+          <p class="service-desc">
+            Connecting custom platforms to international gateways, CRM tools, ERP databases, and messaging portals smoothly.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     6. Case Studies (Expandable Accordion Layout)
+     ========================================================================== -->
+  <section id="case-studies" class="section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="badge">Case Studies</span>
+        <h2>Proven Business Impacts</h2>
+        <p>Detailed reports explaining how custom tech solutions solved operational challenges for companies.</p>
+      </div>
+      
+      <div class="case-studies-container reveal-on-scroll delay-100">
+        
+        <!-- Accordion Item 1 -->
+        <div class="case-accordion">
+          <button class="case-header">
+            <div class="case-header-left">
+              <span class="case-title">Scalewealth Real Estate Platform Architecture</span>
+              <div class="case-meta">
+                <span class="case-meta-item"><i class="fas fa-building"></i> Real Estate Tech</span>
+                <span class="case-meta-item"><i class="fas fa-clock"></i> 4 Month Build</span>
+              </div>
+            </div>
+            <div class="case-header-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+          </button>
+          
+          <div class="case-body">
+            <div class="case-content">
+              <div class="case-details">
+                <div class="case-block">
+                  <h4 class="case-block-title">The Challenge</h4>
+                  <p>
+                    Property management firms across Nigeria handle tenant billing, repair logs, and rent collections manually via Excel. This caused delayed payment alerts, unlogged tenant complaints, and accounting discrepancies.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <h4 class="case-block-title">The Solution</h4>
+                  <p>
+                    Architected a multi-tenant cloud-hosted platform enabling automated monthly PDF invoice delivery, instant bank transfer collection reconciliation, and repair ticket escalations. Built on a serverless microservice database.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="glass-panel case-sidebar-block">
+                <div>
+                  <div class="case-metric">70%</div>
+                  <span class="case-metric-label">Reduction in manual billing hours</span>
+                </div>
+                <div>
+                  <div class="case-metric">24hr</div>
+                  <span class="case-metric-label">Average issue resolution time</span>
+                </div>
+                <div style="margin-top: 1rem;">
+                  <span style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Tech Stack Used</span>
+                  <span class="product-tag">Next.js</span>
+                  <span class="product-tag">PostgreSQL</span>
+                  <span class="product-tag">Supabase</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Accordion Item 2 -->
+        <div class="case-accordion">
+          <button class="case-header">
+            <div class="case-header-left">
+              <span class="case-title">SchoolOS Administration Suite Deployment</span>
+              <div class="case-meta">
+                <span class="case-meta-item"><i class="fas fa-graduation-cap"></i> EdTech</span>
+                <span class="case-meta-item"><i class="fas fa-clock"></i> 6 Month Build</span>
+              </div>
+            </div>
+            <div class="case-header-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+          </button>
+          
+          <div class="case-body">
+            <div class="case-content">
+              <div class="case-details">
+                <div class="case-block">
+                  <h4 class="case-block-title">The Challenge</h4>
+                  <p>
+                    A private school with 1,200 students struggled to manage term enrollment tables, school bus scheduling, report card prints, and tuition collections. They needed a secure solution that parent users could access on mobile.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <h4 class="case-block-title">The Solution</h4>
+                  <p>
+                    Designed a lightweight web portal running on FastAPI that handles instant class list assignment, generates digital report cards with math grade calculations, and reconciles school fees via card payment gateways.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="glass-panel case-sidebar-block">
+                <div>
+                  <div class="case-metric">1,200+</div>
+                  <span class="case-metric-label">Students actively managed</span>
+                </div>
+                <div>
+                  <div class="case-metric">95%</div>
+                  <span class="case-metric-label">Parent adoption rate in 30 days</span>
+                </div>
+                <div style="margin-top: 1rem;">
+                  <span style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Tech Stack Used</span>
+                  <span class="product-tag">React</span>
+                  <span class="product-tag">FastAPI</span>
+                  <span class="product-tag">PostgreSQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     7. Technology Stack Section
+     ========================================================================== -->
+  <section id="tech" class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="badge badge-green">Tech Stack</span>
+        <h2>My Tools & Frameworks</h2>
+        <p>A curated set of technologies I use to build scalable, reliable software products.</p>
+      </div>
+      
+      <div class="tech-container reveal-on-scroll delay-100">
+        
+        <!-- Frontend -->
+        <div class="tech-group">
+          <h3 class="tech-group-title">Frontend Frameworks & UI</h3>
+          <div class="tech-grid">
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fab fa-react"></i></div>
+              <span class="tech-name">React</span>
+            </div>
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fab fa-js"></i></div>
+              <span class="tech-name">Next.js</span>
+            </div>
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fas fa-mobile-screen-button"></i></div>
+              <span class="tech-name">Flutter</span>
+            </div>
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fab fa-js-square"></i></div>
+              <span class="tech-name">TypeScript</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Backend & Databases -->
+        <div class="tech-group">
+          <h3 class="tech-group-title">Backend Architecture & Databases</h3>
+          <div class="tech-grid">
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+              <span class="tech-name">Node.js</span>
+            </div>
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fab fa-python"></i></div>
+              <span class="tech-name">Python</span>
+            </div>
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fas fa-fire"></i></div>
+              <span class="tech-name">FastAPI</span>
+            </div>
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fas fa-database"></i></div>
+              <span class="tech-name">PostgreSQL</span>
+            </div>
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fas fa-leaf"></i></div>
+              <span class="tech-name">MongoDB</span>
+            </div>
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fas fa-cloud"></i></div>
+              <span class="tech-name">Supabase</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cloud Infrastructure & DevOps -->
+        <div class="tech-group">
+          <h3 class="tech-group-title">Cloud Infrastructure & Platforms</h3>
+          <div class="tech-grid">
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fab fa-aws"></i></div>
+              <span class="tech-name">AWS</span>
+            </div>
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fab fa-docker"></i></div>
+              <span class="tech-name">Docker</span>
+            </div>
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fas fa-server"></i></div>
+              <span class="tech-name">Digital Ocean</span>
+            </div>
+            <div class="glass-panel tech-card">
+              <div class="tech-icon"><i class="fas fa-terminal"></i></div>
+              <span class="tech-name">Vercel</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     8. Thought Leadership (Blog Section)
+     ========================================================================== -->
+  <section id="blog" class="section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="badge">Thought Leadership</span>
+        <h2>Engineering Perspectives</h2>
+        <p>Insights, guides, and lessons learned building software systems and digital ventures.</p>
+      </div>
+      
+      <div class="grid-3 reveal-on-scroll delay-100">
+        
+        <!-- Blog 1 -->
+        <a href="#" class="glass-panel blog-card">
+          <div class="blog-img-box">
+            <img src="assets/scalewealth.png" alt="Building real estate SaaS systems post" class="blog-img">
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>May 18, 2026</span>
+              <span>6 Min Read</span>
+            </div>
+            <h3 class="blog-title">How We Engineered the Architecture of Scalewealth Estate</h3>
+            <p class="blog-desc">
+              A deep-dive technical look at the serverless database tables, file storage setup, and auto-billing queues we built to handle tenant collections.
+            </p>
+            <div class="blog-footer">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Blog 2 -->
+        <a href="#" class="glass-panel blog-card">
+          <div class="blog-img-box">
+            <img src="assets/schoolos.png" alt="School management design rules post" class="blog-img">
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>April 29, 2026</span>
+              <span>8 Min Read</span>
+            </div>
+            <h3 class="blog-title">Designing UI Layouts for African Users: SchoolOS Case</h3>
+            <p class="blog-desc">
+              Lessons learned from deploying dashboards to non-technical admin staff and parents, with advice on mobile responsiveness and design options.
+            </p>
+            <div class="blog-footer">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Blog 3 -->
+        <a href="#" class="glass-panel blog-card">
+          <div class="blog-img-box">
+            <img src="assets/devloop.png" alt="Process automation business benefits post" class="blog-img">
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>March 14, 2026</span>
+              <span>5 Min Read</span>
+            </div>
+            <h3 class="blog-title">Why Automation is the Ultimate Growth Engine for Startups</h3>
+            <p class="blog-desc">
+              How young software companies can automate developer setups, customer support tickets, and invoice alerts to build a leaner operation.
+            </p>
+            <div class="blog-footer">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     9. Testimonials Section
+     ========================================================================== -->
+  <section id="testimonials" class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="badge badge-green">Testimonials</span>
+        <h2>What Clients & Partners Say</h2>
+        <p>Feedback from business owners and teams who have worked with me to build their products.</p>
+      </div>
+      
+      <div class="testimonials-slider glass-panel reveal-on-scroll delay-100">
+        <div class="testimonial-track">
+          
+          <!-- Slide 1 -->
+          <div class="testimonial-slide active">
+            <p class="testimonial-quote">
+              "Working with Olamide to design and build our custom real estate portal was a game changer. He delivered an automated system that resolved our billing issues and simplified our lease tracking. Highly recommended."
+            </p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Tobi Akinyemi</span>
+              <span class="testimonial-role">Co-Founder, Scalewealth Properties</span>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">
+              "SchoolOS completely changed our admin operations. Managing 1,200 students, student grade books, and fee collections went from being a headache to a simple automated dashboard. The mobile portal works perfectly."
+            </p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Dr. Florence Alao</span>
+              <span class="testimonial-role">Proprietress, Crown International Academies</span>
+            </div>
+          </div>
+          
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">
+              "Olamide Stephen combines technical expertise with a strong understanding of business needs. He doesn't just build software; he designs architectures that solve real business problems and help companies grow."
+            </p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Emeka Okonkwo</span>
+              <span class="testimonial-role">Chief Technology Officer, Signalix Hubs</span>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Interactive Controls -->
+        <div class="testimonial-controls"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     10. Contact Section
+     ========================================================================== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="grid-2 contact-grid">
+        
+        <!-- Contact details column -->
+        <div class="contact-info reveal-on-scroll">
+          <div class="contact-text">
+            <span class="badge">Contact</span>
+            <h3>Let's Build Something Great Together</h3>
+            <p>
+              Looking to automate your business processes, architect a new software platform, or discuss an integration plan? Send a message and let's discuss details.
+            </p>
+          </div>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-item-text">
+                <span>Direct Email</span>
+                <a href="mailto:olamide@oladevx.com">olamide@oladevx.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fas fa-location-dot"></i>
+              </div>
+              <div class="contact-item-text">
+                <span>Location</span>
+                <a href="#">Based in Nigeria 🇳🇬, Building for Africa 🌍</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Social Link bar -->
+          <div class="contact-socials">
+            <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <!-- Contact submission form panel -->
+        <!-- To connect this form to a backend (Loop 3), add action="https://formspree.io/f/your_formspree_id" to the <form> tag below -->
+        <div class="glass-panel contact-form-panel reveal-on-scroll delay-200">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Olamide Emmanuel Stephen" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="stephen@example.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject" class="form-label">What are you looking to build?</label>
+              <input type="text" id="subject" name="subject" class="form-input" placeholder="Automation Pipeline, SaaS, Custom App..." required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Message Details</label>
+              <textarea id="message" name="message" rows="5" class="form-textarea" placeholder="Tell me about your product, timeline, and goals..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     Footer
+     ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">
+        OLADEVX<span>.</span>
+      </div>
+      <div class="footer-text">
+        &copy; 2026 OLADEVX. All rights reserved. <br>
+        Engineering Software That Helps Businesses Grow.
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#founder-os">Founder OS</a>
+        <a href="#products">Products</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Back-to-Top Button -->
+  <button class="scroll-top-btn" aria-label="Scroll back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Script Imports -->
+  <script src="js/particles.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
