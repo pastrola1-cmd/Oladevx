@@ -207,6 +207,26 @@
                 <a href="#products" class="os-card-link">View Details <i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
+
+            <div class="glass-panel os-card">
+              <div class="os-status-indicator indicator-current pulse-indicator-green"></div>
+              <h4 class="os-card-title">Vyza <span class="os-tag-current">✓ Active</span></h4>
+              <p class="os-card-desc">Cross-border payment infrastructure enabling sub-dollar remittances, offline currency vouchers, and unified mobile wallets for West Africa.</p>
+              <div class="os-card-footer">
+                <span class="os-card-role">Co-Founder & Mobile Lead</span>
+                <a href="#products" class="os-card-link">View Details <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            
+            <div class="glass-panel os-card">
+              <div class="os-status-indicator indicator-current pulse-indicator-green"></div>
+              <h4 class="os-card-title">MannaNotes <span class="os-tag-current">✓ Active</span></h4>
+              <p class="os-card-desc">Local-first synchronized markdown notebook and workspace utilizing sqlite syncing libraries and offline database schemas.</p>
+              <div class="os-card-footer">
+                <span class="os-card-role">Lead Architect & Creator</span>
+                <a href="#products" class="os-card-link">View Details <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
             
           </div>
           
@@ -273,10 +293,26 @@
               </div>
               
               <div class="os-map-item">
+                <div class="os-map-dot active"></div>
+                <div class="os-map-content">
+                  <span class="os-map-name">Vyza Mobile Remittance</span>
+                  <span class="os-map-status">Beta release. Scaling P2P corridors.</span>
+                </div>
+              </div>
+              
+              <div class="os-map-item">
+                <div class="os-map-dot active"></div>
+                <div class="os-map-content">
+                  <span class="os-map-name">MannaNotes Editor</span>
+                  <span class="os-map-status">Launched. Local-first sync active.</span>
+                </div>
+              </div>
+
+              <div class="os-map-item">
                 <div class="os-map-dot"></div>
                 <div class="os-map-content">
-                  <span class="os-map-name">Fintech Gateway</span>
-                  <span class="os-map-status">Conceptual architecture review.</span>
+                  <span class="os-map-name">Fintech Gateway Infrastructure</span>
+                  <span class="os-map-status">Conceptual payment aggregation review.</span>
                 </div>
               </div>
               
@@ -284,7 +320,7 @@
                 <div class="os-map-dot"></div>
                 <div class="os-map-content">
                   <span class="os-map-name">AI Localized Agents</span>
-                  <span class="os-map-status">Research & dataset gathering.</span>
+                  <span class="os-map-status">Research & dataset training loops.</span>
                 </div>
               </div>
             </div>
@@ -306,14 +342,21 @@
         <p>Deep-dives into active platforms handling high transaction volume and operational workloads.</p>
       </div>
       
+      <div class="product-filters reveal-on-scroll delay-100">
+        <button class="filter-btn active" data-filter="all">All Systems</button>
+        <button class="filter-btn" data-filter="web-apps">Web Platforms</button>
+        <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+        <button class="filter-btn" data-filter="dev-tools">Dev Utilities</button>
+      </div>
+      
       <div class="product-carousel reveal-on-scroll delay-100">
         
         <!-- Product Card 1 -->
-        <div class="glass-panel product-card">
+        <div class="glass-panel product-card web-apps">
           <div class="product-media">
             <img src="assets/scalewealth.png" alt="Scalewealth Estate dashboard layout" class="product-img">
             <div class="product-media-overlay">
-              <a href="#case-studies" class="btn btn-secondary btn-sm">Read Case Study</a>
+              <a href="case-studies/scalewealth.html" class="btn btn-secondary btn-sm">Read Case Study</a>
             </div>
           </div>
           <div class="product-body">
@@ -335,11 +378,11 @@
         </div>
         
         <!-- Product Card 2 -->
-        <div class="glass-panel product-card">
+        <div class="glass-panel product-card web-apps">
           <div class="product-media">
             <img src="assets/schoolos.png" alt="SchoolOS dashboard layout" class="product-img">
             <div class="product-media-overlay">
-              <a href="#case-studies" class="btn btn-secondary btn-sm">Read Case Study</a>
+              <a href="case-studies/schoolos.html" class="btn btn-secondary btn-sm">Read Case Study</a>
             </div>
           </div>
           <div class="product-body">
@@ -361,7 +404,7 @@
         </div>
         
         <!-- Product Card 3 -->
-        <div class="glass-panel product-card">
+        <div class="glass-panel product-card dev-tools">
           <div class="product-media">
             <img src="assets/devloop.png" alt="DevLoop developer utility layout" class="product-img">
             <div class="product-media-overlay">
@@ -382,6 +425,58 @@
             <div class="product-footer">
               <span style="font-size: 0.85rem; color: var(--text-muted);">Status: Beta</span>
               <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.4rem 1rem;">Get Code <i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="glass-panel product-card mobile">
+          <div class="product-media">
+            <img src="assets/devloop.png" alt="Vyza mobile UI layout" class="product-img" style="filter: hue-rotate(120deg);">
+            <div class="product-media-overlay">
+              <span style="color: #fff; font-weight: 600;">Active/Scaling</span>
+            </div>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Vyza</h3>
+            <p class="product-desc">
+              A peer-to-peer cross-border financial application for West Africa, offering instant currency validation, off-grid transaction verification, and localized mobile wallets.
+            </p>
+            <div class="product-tags">
+              <span class="product-tag">Flutter</span>
+              <span class="product-tag">Dart</span>
+              <span class="product-tag">Node.js</span>
+              <span class="product-tag">MongoDB</span>
+            </div>
+            <div class="product-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Status: Active</span>
+              <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.4rem 1rem;">Launch App <i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="glass-panel product-card web-apps">
+          <div class="product-media">
+            <img src="assets/devloop.png" alt="MannaNotes dashboard layout" class="product-img" style="filter: hue-rotate(240deg);">
+            <div class="product-media-overlay">
+              <span style="color: #fff; font-weight: 600;">Active/Live</span>
+            </div>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">MannaNotes</h3>
+            <p class="product-desc">
+              A local-first, markdown-based cloud-synchronized workspace for developers and technical writers, built with offline replication sync and LaTeX rendering.
+            </p>
+            <div class="product-tags">
+              <span class="product-tag">React</span>
+              <span class="product-tag">Electron</span>
+              <span class="product-tag">SQLite</span>
+              <span class="product-tag">Node.js</span>
+            </div>
+            <div class="product-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Status: Active</span>
+              <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.4rem 1rem;">Get App <i class="fas fa-download"></i></a>
             </div>
           </div>
         </div>
@@ -515,6 +610,7 @@
                   <p>
                     Architected a multi-tenant cloud-hosted platform enabling automated monthly PDF invoice delivery, instant bank transfer collection reconciliation, and repair ticket escalations. Built on a serverless microservice database.
                   </p>
+                  <a href="case-studies/scalewealth.html" class="btn btn-secondary btn-sm" style="margin-top: 1rem; padding: 0.4rem 1.25rem;">View Full Case Study <i class="fas fa-arrow-right"></i></a>
                 </div>
               </div>
               
@@ -567,6 +663,7 @@
                   <p>
                     Designed a lightweight web portal running on FastAPI that handles instant class list assignment, generates digital report cards with math grade calculations, and reconciles school fees via card payment gateways.
                   </p>
+                  <a href="case-studies/schoolos.html" class="btn btn-secondary btn-sm" style="margin-top: 1rem; padding: 0.4rem 1.25rem;">View Full Case Study <i class="fas fa-arrow-right"></i></a>
                 </div>
               </div>
               

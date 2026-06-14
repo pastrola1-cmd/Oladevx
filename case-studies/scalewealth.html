@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Case Study: Scalewealth Estate | OLADEVX</title>
+  <meta name="description" content="Detailed software architecture and systems engineering case study for Scalewealth Estate property automation portal by OLADEVX.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0b11'/%3E%3Cpath d='M30 30h40v10H40v10h30v10H40v10h30v10H30z' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236c63ff'/%3E%3Cstop offset='100%25' stop-color='%2300d4aa'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/sections.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/case-study.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Trail (Desktop only) -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Ambient Global Background Graphics -->
+  <div class="bg-decorations">
+    <div class="bg-dot-grid"></div>
+    <div class="bg-orb bg-orb-primary animate-orb-1" style="top: 10%; left: -10%;"></div>
+    <div class="bg-orb bg-orb-secondary animate-orb-2" style="top: 50%; right: -10%;"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="../index.html#hero" class="logo">
+        OLADEVX<span>.</span>
+      </a>
+      
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#founder-os" class="nav-link">Founder OS</a></li>
+          <li><a href="../index.html#products" class="nav-link">Products</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#case-studies" class="nav-link active">Case Studies</a></li>
+          <li><a href="../index.html#tech" class="nav-link">Tech Stack</a></li>
+          <li><a href="../index.html#contact" class="btn btn-secondary btn-sm">Let's Talk</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="cs-hero">
+    <div class="container">
+      <div class="cs-badge"><i class="fas fa-building"></i> SaaS / PropTech</div>
+      <h1>Scalewealth Estate Platform Architecture</h1>
+      <p class="reveal-on-scroll delay-100" style="max-width: 800px; font-size: 1.2rem; color: var(--text-secondary);">
+        An advanced multi-tenant automation portal built to eliminate administrative overhead, reconcile rent collections, and expedite tenant repair request routing.
+      </p>
+      
+      <div class="cs-meta-grid reveal-on-scroll delay-200">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Client / Organization</span>
+          <span class="cs-meta-value">Scalewealth Properties</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">Co-Founder & Product Architect</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Timeline</span>
+          <span class="cs-meta-value">4 Months (Q1 2026)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Core Tech</span>
+          <span class="cs-meta-value">Next.js / PostgreSQL / Supabase</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Bar -->
+  <div class="container reveal-on-scroll delay-300">
+    <div class="glass-panel cs-metrics-bar">
+      <div class="cs-metric-card">
+        <div class="cs-metric-num">70%</div>
+        <div class="cs-metric-lbl">Reduction in Billing Hours</div>
+      </div>
+      <div class="cs-metric-card">
+        <div class="cs-metric-num">24hr</div>
+        <div class="cs-metric-lbl">Avg. Issue Resolution Speed</div>
+      </div>
+      <div class="cs-metric-card">
+        <div class="cs-metric-num">$120k+</div>
+        <div class="cs-metric-lbl">Rent Reconciled Electronically</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Layout -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cs-layout">
+        
+        <!-- Main Content -->
+        <main class="cs-main reveal-on-scroll">
+          
+          <div class="cs-section">
+            <h2>Executive Summary</h2>
+            <p>
+              Scalewealth Properties manages a diverse portfolio of commercial and residential assets across Lagos, Nigeria. As they scaled past 150 units, managing operations via spreadsheet ledgers, paper receipts, and uncentralized text messages became unsustainable. 
+            </p>
+            <p>
+              Under the OLADEVX banner, we architected and delivered a multi-tenant cloud dashboard. The platform fully automates monthly invoicing, integrates instant virtual bank account collections, reconciles payments, and logs maintenance tickets, saving hundreds of administrative hours.
+            </p>
+          </div>
+
+          <div class="cs-section">
+            <h2>The Challenge</h2>
+            <p>
+              The management firm suffered from three core operational bottlenecks:
+            </p>
+            <ul>
+              <li><strong>Billing Drifts:</strong> Manually generating PDF rent statements and invoices for hundreds of tenants on different billing dates led to delays, calculations errors, and slow collections.</li>
+              <li><strong>Manual Payment Auditing:</strong> Bank transfers are the dominant rent payment method in Nigeria. Accounting staff had to manually match screenshots of bank receipts against bank statements—a process vulnerable to fraud and human error.</li>
+              <li><strong>Maintenance Tracking:</strong> Tenant complaints about plumbing, electrical, or structural issues were scattered across WhatsApp logs, leading to long delays and frustrated tenants.</li>
+            </ul>
+          </div>
+
+          <div class="cs-section">
+            <h2>System Architecture</h2>
+            <p>
+              We designed a serverless architecture optimized for high security, low latency, and rapid multi-tenant isolation. Below is the system flow blueprint:
+            </p>
+            
+            <div class="cs-arch-diagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" width="100%">
+                <defs>
+                  <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#6c63ff"/>
+                    <stop offset="100%" stop-color="#00d4aa"/>
+                  </linearGradient>
+                </defs>
+                
+                <!-- Client/Tenant Node -->
+                <rect x="20" y="90" width="120" height="80" rx="10" fill="#11111a" stroke="url(#primary-grad)" stroke-width="2"/>
+                <text x="80" y="130" fill="#f5f5f7" font-family="Outfit" font-size="14" font-weight="600" text-anchor="middle">Tenant / Admin</text>
+                <text x="80" y="150" fill="#a0a0ba" font-family="Inter" font-size="11" text-anchor="middle">Next.js Client UI</text>
+                
+                <!-- Flow Arrow -->
+                <path d="M 140 130 L 190 130" stroke="#62627a" stroke-width="2" fill="none"/>
+                <polygon points="190,130 182,125 182,135" fill="#62627a"/>
+                
+                <!-- API Gateway / Edge Node -->
+                <rect x="200" y="90" width="130" height="80" rx="10" fill="#11111a" stroke="url(#primary-grad)" stroke-width="2"/>
+                <text x="265" y="130" fill="#f5f5f7" font-family="Outfit" font-size="14" font-weight="600" text-anchor="middle">Vercel Edge API</text>
+                <text x="265" y="150" fill="#a0a0ba" font-family="Inter" font-size="11" text-anchor="middle">Fast Authentication</text>
+                
+                <!-- Flow Arrows split -->
+                <path d="M 330 130 L 380 90" stroke="#62627a" stroke-width="2" fill="none"/>
+                <polygon points="380,90 371,90 376,98" fill="#62627a"/>
+                
+                <path d="M 330 130 L 380 170" stroke="#62627a" stroke-width="2" fill="none"/>
+                <polygon points="380,170 376,162 371,170" fill="#62627a"/>
+                
+                <!-- Database Node -->
+                <rect x="390" y="40" width="140" height="80" rx="10" fill="#11111a" stroke="url(#primary-grad)" stroke-width="2"/>
+                <text x="460" y="80" fill="#f5f5f7" font-family="Outfit" font-size="14" font-weight="600" text-anchor="middle">Postgres (Supabase)</text>
+                <text x="460" y="100" fill="#a0a0ba" font-family="Inter" font-size="11" text-anchor="middle">Multi-Tenant Tables</text>
+                
+                <!-- Billing Engine / Service Node -->
+                <rect x="390" y="140" width="140" height="80" rx="10" fill="#11111a" stroke="url(#primary-grad)" stroke-width="2"/>
+                <text x="460" y="180" fill="#f5f5f7" font-family="Outfit" font-size="14" font-weight="600" text-anchor="middle">Automated Billing</text>
+                <text x="460" y="200" fill="#a0a0ba" font-family="Inter" font-size="11" text-anchor="middle">Cron Schedulers</text>
+                
+                <!-- Database flow connection -->
+                <path d="M 460 120 L 460 140" stroke="#00d4aa" stroke-dasharray="4" stroke-width="2" fill="none"/>
+                
+                <!-- Final Flow Arrows -->
+                <path d="M 530 80 L 570 110" stroke="#62627a" stroke-width="2" fill="none"/>
+                <polygon points="570,110 561,107 566,114" fill="#62627a"/>
+                
+                <path d="M 530 180 L 570 150" stroke="#62627a" stroke-width="2" fill="none"/>
+                <polygon points="570,150 566,146 561,153" fill="#62627a"/>
+                
+                <!-- Paystack Node -->
+                <rect x="580" y="90" width="100" height="80" rx="10" fill="#11111a" stroke="url(#primary-grad)" stroke-width="2"/>
+                <text x="630" y="130" fill="#f5f5f7" font-family="Outfit" font-size="14" font-weight="600" text-anchor="middle">Paystack Gateway</text>
+                <text x="630" y="150" fill="#a0a0ba" font-family="Inter" font-size="11" text-anchor="middle">Virtual Accounts</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="cs-section">
+            <h2>The Solution</h2>
+            <p>
+              We developed a bespoke three-layered solution:
+            </p>
+            
+            <div class="cs-feature-list">
+              
+              <div class="cs-feature-item">
+                <div class="cs-feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                <div class="cs-feature-content">
+                  <h4>Automated Billing Engine</h4>
+                  <p>Developed a Node/TypeScript micro-billing service running on scheduled serverless Cron triggers. It automatically checks database leases daily, generates localized invoice files, compiles digital PDFs, and mails tenant alerts without manual staff inputs.</p>
+                </div>
+              </div>
+              
+              <div class="cs-feature-item">
+                <div class="cs-feature-icon"><i class="fas fa-shield-halved"></i></div>
+                <div class="cs-feature-content">
+                  <h4>Payment Reconciliation Hooks</h4>
+                  <p>Integrated payment provider webhooks (Paystack) to allocate dedicated virtual bank account numbers to each tenant. When a tenant transfers rent to their assigned account, the webhook fires, the system matches the transaction code, updates the tenant ledger, sends an receipt, and alerts management instantly.</p>
+                </div>
+              </div>
+              
+              <div class="cs-feature-item">
+                <div class="cs-feature-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+                <div class="cs-feature-content">
+                  <h4>Maintenance Ticketing System</h4>
+                  <p>Built a tenant service portal allowing uploads of image logs, priority configurations (Low/Medium/High), and automated contractor assignment rules based on local service directories, resolving issues faster.</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="cs-section">
+            <h2>Business Impact</h2>
+            <p>
+              Within 90 days of deployment, Scalewealth Properties recorded exceptional results:
+            </p>
+            <ul>
+              <li><strong>Saved Billing Hours:</strong> Automated billing saved the accounting team **32 working hours** per month.</li>
+              <li><strong>Zero Reconciliation Errors:</strong> Direct virtual account bank transfers bypassed receipt matching audits, reducing manual ledger errors to absolute zero.</li>
+              <li><strong>Happier Tenants:</strong> Issue routing timers dropped from an average of 5 days to **under 24 hours** because local handymen were alerted instantly via SMS when a high-priority ticket was opened.</li>
+            </ul>
+          </div>
+          
+        </main>
+        
+        <!-- Sidebar -->
+        <aside class="cs-sidebar reveal-on-scroll delay-200">
+          
+          <!-- Tech stack widget -->
+          <div class="glass-panel cs-widget">
+            <h3 class="cs-widget-title">Technology Stack</h3>
+            <div class="cs-tech-tags">
+              <span class="cs-tech-tag">Next.js</span>
+              <span class="cs-tech-tag">TypeScript</span>
+              <span class="cs-tech-tag">PostgreSQL</span>
+              <span class="cs-tech-tag">Supabase</span>
+              <span class="cs-tech-tag">Node.js</span>
+              <span class="cs-tech-tag">Paystack API</span>
+              <span class="cs-tech-tag">Vercel Serverless</span>
+              <span class="cs-tech-tag">TailwindCSS</span>
+            </div>
+          </div>
+          
+          <!-- Navigation widget -->
+          <div class="glass-panel cs-widget">
+            <h3 class="cs-widget-title">Project Navigation</h3>
+            <div class="cs-nav-box">
+              <a href="schoolos.html" class="cs-nav-link">
+                <span>Next Case Study: SchoolOS</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="../index.html#products" class="cs-nav-link">
+                <span>View All Products</span>
+                <i class="fas fa-cubes"></i>
+              </a>
+              <a href="../index.html#hero" class="cs-nav-link">
+                <span>Back to Homepage</span>
+                <i class="fas fa-home"></i>
+              </a>
+            </div>
+          </div>
+          
+        </aside>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Back Link -->
+  <footer class="cs-back-footer">
+    <div class="container">
+      <a href="../index.html#case-studies" class="btn btn-primary">
+        <i class="fas fa-arrow-left"></i> Back to Case Studies
+      </a>
+      <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+        &copy; 2026 OLADEVX. Systems Engineered for Scale.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll Back-to-Top Button -->
+  <button class="scroll-top-btn" aria-label="Scroll back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="../js/animations.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
