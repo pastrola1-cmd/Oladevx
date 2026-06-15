@@ -614,4 +614,139 @@ func RouteRemittance(txID string, amount float64, phone string) (bool, error) {
     // Run initial highlight
     sandboxCodeBody.innerHTML = highlightSyntax(codeTemplates.eng.code, "TypeScript");
   }
+
+  /* ==========================================================================
+     14. Sandbox Demo / Code Vault Modal Logic
+     ========================================================================== */
+  const sandboxModal = document.getElementById('sandbox-modal');
+  const modalClose = document.getElementById('sandbox-modal-close');
+  const modalTerminal = document.getElementById('sandbox-modal-terminal');
+  const formContainer = document.getElementById('sandbox-form-container');
+  const accessForm = document.getElementById('sandbox-access-form');
+  const requestKeyBtn = document.getElementById('sandbox-request-key');
+  const formFeedback = document.getElementById('sandbox-form-feedback');
+  const modalTitle = document.getElementById('sandbox-modal-title');
+  const modalTermTitle = document.getElementById('sandbox-terminal-title');
+  const sandboxKeyInput = document.getElementById('sandbox-key');
+
+  const launchBtns = document.querySelectorAll('.launch-sandbox-btn');
+  const codeBtns = document.querySelectorAll('.request-code-btn');
+
+  if (sandboxModal && modalClose && modalTerminal && formContainer) {
+    
+    const openModal = (projectName, isCodeVault = false) => {
+      // Setup titles
+      if (isCodeVault) {
+        modalTitle.innerHTML = `<i class="fab fa-github"></i> Access Code Vault: ${projectName}`;
+        modalTermTitle.textContent = "vault-auth.sh";
+        sandboxKeyInput.placeholder = "Enter SSH developer token...";
+      } else {
+        modalTitle.innerHTML = `<i class="fas fa-server"></i> Initialize Sandbox: ${projectName}`;
+        modalTermTitle.textContent = "sandbox-init.sh";
+        sandboxKeyInput.placeholder = "Enter API Access Token...";
+      }
+      
+      // Reset feedback and input
+      formFeedback.innerHTML = "";
+      sandboxKeyInput.value = "";
+      formContainer.style.display = "none";
+      modalTerminal.innerHTML = "";
+      
+      // Open modal
+      sandboxModal.classList.add('open');
+      document.body.style.overflow = "hidden"; // Disable scroll
+      
+      // Simulated Boot Log Script
+      const logs = isCodeVault ? [
+        "Resolving secure vault address: keys.github.com...",
+        "Establishing encrypted TLS handshake (SSL_RSA_WITH_AES_256_GCM)...",
+        "Authorizing connection via local client ssh-agent...",
+        "Access Denied: Public key credentials not found.",
+        "Prompting client for secure SSH vault access token..."
+      ] : [
+        "Contacting API gateway and spawning sandboxed demo container...",
+        "Configuring network namespaces: internal bridge IP assigned.",
+        "TLS connection established. SSL attestation: OK.",
+        "Mounting isolated postgresql DB and loading seed datasets...",
+        "System health verification checks: all services reporting healthy.",
+        "Container fully initialized. Awaiting API key validation..."
+      ];
+      
+      let logIndex = 0;
+      const typeLogLine = () => {
+        if (logIndex < logs.length) {
+          const line = document.createElement('div');
+          line.className = 'terminal-line';
+          line.innerHTML = `<span class="terminal-prompt">$</span> ${logs[logIndex]}`;
+          modalTerminal.appendChild(line);
+          modalTerminal.scrollTop = modalTerminal.scrollHeight;
+          logIndex++;
+          setTimeout(typeLogLine, 250);
+        } else {
+          // Finished logging, show form container
+          formContainer.style.display = "block";
+        }
+      };
+      
+      setTimeout(typeLogLine, 100);
+    };
+
+    const closeModal = () => {
+      sandboxModal.classList.remove('open');
+      document.body.style.overflow = ""; // Restore scroll
+    };
+
+    // Wire buttons
+    launchBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const project = btn.getAttribute('data-project');
+        openModal(project, false);
+      });
+    });
+
+    codeBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const project = btn.getAttribute('data-project');
+        openModal(project, true);
+      });
+    });
+
+    // Close on click close button or overlay
+    modalClose.addEventListener('click', closeModal);
+    sandboxModal.addEventListener('click', (e) => {
+      if (e.target === sandboxModal) {
+        closeModal();
+      }
+    });
+
+    // Handle form submit
+    accessForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const key = sandboxKeyInput.value.trim();
+      formFeedback.innerHTML = `<span style="color: var(--text-secondary);"><i class="fas fa-spinner fa-spin"></i> Verifying credentials...</span>`;
+      
+      setTimeout(() => {
+        if (key === "DEV_DEMO_2026_OK" || key === "SSH_VAULT_PASS") {
+          formFeedback.innerHTML = `<span style="color: var(--accent-secondary);"><i class="fas fa-check-circle"></i> Verification success. Spawning UI instance... Redirecting to demo gateway.</span>`;
+          setTimeout(() => {
+            closeModal();
+            alert("Demo Sandbox connection established! Redirecting to secure sandbox environment.");
+          }, 1500);
+        } else {
+          formFeedback.innerHTML = `<span style="color: #ef4444;"><i class="fas fa-exclamation-triangle"></i> Verification Failed. Access token rejected by gateway.</span>`;
+        }
+      }, 1000);
+    });
+
+    // Generate mock token
+    requestKeyBtn.addEventListener('click', () => {
+      const isCode = modalTermTitle.textContent === "vault-auth.sh";
+      const token = isCode ? "SSH_VAULT_PASS" : "DEV_DEMO_2026_OK";
+      sandboxKeyInput.value = token;
+      formFeedback.innerHTML = `<span style="color: var(--accent-secondary);"><i class="fas fa-key"></i> Key retrieved: ${token}. Click Verify to launch.</span>`;
+    });
+  }
 });

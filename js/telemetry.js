@@ -8,7 +8,7 @@ class TelemetrySimulator {
       scalewealth: [15, 18, 14, 16, 20, 18, 17, 19, 16, 18],
       schoolos: [22, 25, 24, 28, 23, 27, 26, 25, 28, 30],
       vyza: [40, 42, 45, 38, 41, 46, 44, 43, 47, 45],
-      mannanotes: [8, 10, 9, 11, 8, 12, 10, 9, 11, 10]
+      mannabible: [8, 10, 9, 11, 8, 12, 10, 9, 11, 10]
     };
     
     this.init();
@@ -111,17 +111,17 @@ class TelemetrySimulator {
     this.setTextContent('vyza-cpu', vyzaCpu + '%');
     this.drawSparkline('vyza-sparkline', this.history.vyza, '#6c63ff');
 
-    // 4. MannaNotes Stats
+    // 4. Manna Bible App Stats
     const mnUsers = this.getRandomValue(915, 12);
     const mnLatency = this.getRandomValue(14, 2);
     const mnCpu = this.getRandomValue(10, 2);
-    this.history.mannanotes.shift();
-    this.history.mannanotes.push(mnCpu);
+    this.history.mannabible.shift();
+    this.history.mannabible.push(mnCpu);
     
     this.setTextContent('mn-users', mnUsers);
     this.setTextContent('mn-latency', mnLatency + 'ms');
     this.setTextContent('mn-cpu', mnCpu + '%');
-    this.drawSparkline('mn-sparkline', this.history.mannanotes, '#6c63ff');
+    this.drawSparkline('mn-sparkline', this.history.mannabible, '#6c63ff');
 
     // 5. DevLoop Stats
     const dlDownloads = this.getRandomValue(3535, 3);

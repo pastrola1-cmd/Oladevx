@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Case Study: Manna Bible | OLADEVX</title>
+  <meta name="description" content="Detailed software architecture and systems engineering case study for Manna Bible application by OLADEVX.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0b11'/%3E%3Cpath d='M30 30h40v10H40v10h30v10H40v10h30v10H30z' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236c63ff'/%3E%3Cstop offset='100%25' stop-color='%2300d4aa'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/sections.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/case-study.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Trail (Desktop only) -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Ambient Global Background Graphics -->
+  <div class="bg-decorations">
+    <div class="bg-dot-grid"></div>
+    <div class="bg-orb bg-orb-primary animate-orb-1" style="top: 10%; left: -10%;"></div>
+    <div class="bg-orb bg-orb-secondary animate-orb-2" style="top: 50%; right: -10%;"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="../index.html#hero" class="logo">
+        OLADEVX<span>.</span>
+      </a>
+      
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#founder-os" class="nav-link">Founder OS</a></li>
+          <li><a href="../index.html#products" class="nav-link">Products</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#case-studies" class="nav-link active">Case Studies</a></li>
+          <li><a href="../index.html#tech" class="nav-link">Tech Stack</a></li>
+          <li><a href="../index.html#contact" class="btn btn-secondary btn-sm">Let's Talk</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="cs-hero">
+    <div class="container">
+      <div class="cs-badge"><i class="fas fa-book-open"></i> Mobile App / Local-First</div>
+      <h1>Manna Bible App Offline Sync Architecture</h1>
+      <p class="reveal-on-scroll delay-100" style="max-width: 800px; font-size: 1.2rem; color: var(--text-secondary);">
+        Engineered a local-first SQLite text database with background sync layers to provide offline scripture searches and synchronized study journals.
+      </p>
+      
+      <div class="cs-meta-grid reveal-on-scroll delay-200">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Client / Organization</span>
+          <span class="cs-meta-value">Manna Bible Initiative</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">Lead Architect &amp; Creator</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Timeline</span>
+          <span class="cs-meta-value">3 Months (Q3 2026)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Core Tech</span>
+          <span class="cs-meta-value">Flutter / Dart / SQLite / Firebase</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Bar -->
+  <div class="container reveal-on-scroll delay-300">
+    <div class="glass-panel cs-metrics-bar">
+      <div class="cs-metric-card">
+        <div class="cs-metric-num">20k+</div>
+        <div class="cs-metric-lbl">Active Mobile Users</div>
+      </div>
+      <div class="cs-metric-card">
+        <div class="cs-metric-num">0ms</div>
+        <div class="cs-metric-lbl">Scripture Search Latency</div>
+      </div>
+      <div class="cs-metric-card">
+        <div class="cs-metric-num">100%</div>
+        <div class="cs-metric-lbl">Offline-First Operational Time</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Layout -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cs-layout">
+        
+        <!-- Main Content -->
+        <main class="cs-main reveal-on-scroll">
+          
+          <div class="cs-section">
+            <h2>Executive Summary</h2>
+            <p>
+              Many mobile reading and study applications require active internet connections to fetch content or save user notes. In developing markets with unstable data coverage, online-only applications offer poor reliability, causing lost bookmarks and sync loops.
+            </p>
+            <p>
+              We designed the Manna Bible App around a **local-first database architecture**. By storing the complete scripture text database locally and capturing user note logs inside a local SQLite ledger, we achieve zero-latency offline performance. Study notes and highlights are synced automatically with Firebase Cloud databases using background synchronization brokers when the device regains network access.
+            </p>
+          </div>
+
+          <div class="cs-section">
+            <h2>The Challenge</h2>
+            <p>
+              Building a responsive local-first syncing structure presented three core technical challenges:
+            </p>
+            <ul>
+              <li><strong>Local Search Performance:</strong> Searching through thousands of verses for keywords on budget Android devices takes up CPU processing power, causing user interface stuttering.</li>
+              <li><strong>Conflict Resolution:</strong> When users edit study notes on multiple devices offline, reconciling conflicting edits chronologically without overwriting data is complex.</li>
+              <li><strong>Battery &amp; Data Overhead:</strong> Constant connection polling drains device battery levels and wastes user mobile data quotas.</li>
+            </ul>
+          </div>
+
+          <div class="cs-section">
+            <h2>System Architecture</h2>
+            <p>
+              The system relies on SQLite FTS (Full-Text Search) tables for fast keyword querying, backed by a background delta sync manager that pushes modifications to Firebase. Below is the system flow:
+            </p>
+            
+            <div class="cs-arch-diagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" width="100%">
+                <defs>
+                  <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#6c63ff"/>
+                    <stop offset="100%" stop-color="#00d4aa"/>
+                  </linearGradient>
+                </defs>
+                
+                <!-- Client/Tenant Node -->
+                <rect x="20" y="90" width="120" height="80" rx="10" fill="#11111a" stroke="url(#primary-grad)" stroke-width="2"/>
+                <text x="80" y="130" fill="#f5f5f7" font-family="Outfit" font-size="14" font-weight="600" text-anchor="middle">Mobile UI</text>
+                <text x="80" y="150" fill="#a0a0ba" font-family="Inter" font-size="11" text-anchor="middle">Flutter App Client</text>
+                
+                <!-- Flow Arrow -->
+                <path d="M 140 130 L 190 130" stroke="#62627a" stroke-width="2" fill="none"/>
+                <polygon points="190,130 182,125 182,135" fill="#62627a"/>
+                
+                <!-- API Gateway / Edge Node -->
+                <rect x="200" y="90" width="130" height="80" rx="10" fill="#11111a" stroke="url(#primary-grad)" stroke-width="2"/>
+                <text x="265" y="130" fill="#f5f5f7" font-family="Outfit" font-size="14" font-weight="600" text-anchor="middle">Local SQLite DB</text>
+                <text x="265" y="150" fill="#a0a0ba" font-family="Inter" font-size="11" text-anchor="middle">FTS5 Search Tables</text>
+                
+                <!-- Flow Arrows split -->
+                <path d="M 330 130 L 380 90" stroke="#62627a" stroke-width="2" fill="none"/>
+                <polygon points="380,90 371,90 376,98" fill="#62627a"/>
+                
+                <path d="M 330 130 L 380 170" stroke="#62627a" stroke-width="2" fill="none"/>
+                <polygon points="380,170 376,162 371,170" fill="#62627a"/>
+                
+                <!-- Database Node -->
+                <rect x="390" y="40" width="140" height="80" rx="10" fill="#11111a" stroke="url(#primary-grad)" stroke-width="2"/>
+                <text x="460" y="80" fill="#f5f5f7" font-family="Outfit" font-size="14" font-weight="600" text-anchor="middle">Sync manager</text>
+                <text x="460" y="100" fill="#a0a0ba" font-family="Inter" font-size="11" text-anchor="middle">Delta Log Queues</text>
+                
+                <!-- Billing Engine / Service Node -->
+                <rect x="390" y="140" width="140" height="80" rx="10" fill="#11111a" stroke="url(#primary-grad)" stroke-width="2"/>
+                <text x="460" y="180" fill="#f5f5f7" font-family="Outfit" font-size="14" font-weight="600" text-anchor="middle">Network monitor</text>
+                <text x="460" y="200" fill="#a0a0ba" font-family="Inter" font-size="11" text-anchor="middle">Connection Status</text>
+                
+                <!-- Database flow connection -->
+                <path d="M 460 120 L 460 140" stroke="#00d4aa" stroke-dasharray="4" stroke-width="2" fill="none"/>
+                
+                <!-- Final Flow Arrows -->
+                <path d="M 530 80 L 570 110" stroke="#62627a" stroke-width="2" fill="none"/>
+                <polygon points="570,110 561,107 566,114" fill="#62627a"/>
+                
+                <path d="M 530 180 L 570 150" stroke="#62627a" stroke-width="2" fill="none"/>
+                <polygon points="570,150 566,146 561,153" fill="#62627a"/>
+                
+                <!-- Paystack Node -->
+                <rect x="580" y="90" width="100" height="80" rx="10" fill="#11111a" stroke="url(#primary-grad)" stroke-width="2"/>
+                <text x="630" y="130" fill="#f5f5f7" font-family="Outfit" font-size="14" font-weight="600" text-anchor="middle">Cloud Firestore</text>
+                <text x="630" y="150" fill="#a0a0ba" font-family="Inter" font-size="11" text-anchor="middle">Firebase Cloud Sync</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="cs-section">
+            <h2>The Solution</h2>
+            <p>
+              We designed an optimized offline-first ledger and indexing database structure:
+            </p>
+            
+            <div class="cs-feature-list">
+              
+              <div class="cs-feature-item">
+                <div class="cs-feature-icon"><i class="fas fa-magnifying-glass"></i></div>
+                <div class="cs-feature-content">
+                  <h4>SQLite FTS5 Text Indexing</h4>
+                  <p>Implemented SQLite's Full-Text Search v5 virtual tables inside Dart. By indexing the complete Bible text and pre-compiling token prefix tables, we reduced keyword search times to **0ms** (sub-millisecond) directly on mobile devices.</p>
+                </div>
+              </div>
+              
+              <div class="cs-feature-item">
+                <div class="cs-feature-icon"><i class="fas fa-rotate"></i></div>
+                <div class="cs-feature-content">
+                  <h4>Delta Queue Sync Manager</h4>
+                  <p>Instead of copying entire study journals to the cloud, the application records delta modifications (inserts, edits, deletes) inside a local transaction queue. When a connection is verified, the sync manager pushes only these deltas to Firestore, reducing bandwidth usage.</p>
+                </div>
+              </div>
+              
+              <div class="cs-feature-item">
+                <div class="cs-feature-icon"><i class="fas fa-code-compare"></i></div>
+                <div class="cs-feature-content">
+                  <h4>Last-Write-Wins Conflict Logic</h4>
+                  <p>Resolved editing sync conflicts by tagging every database change with a high-resolution UTC timestamp. The Cloud Firestore functions verify the timestamps, reconciling delta rows cleanly without data loss.</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="cs-section">
+            <h2>Business Impact</h2>
+            <p>
+              Within 90 days of launch, the Manna Bible App recorded the following achievements:
+            </p>
+            <ul>
+              <li><strong>User Growth:</strong> Onboarded **20,000+ active users** with minimal marketing spend.</li>
+              <li><strong>Offline Reliability:</strong> Bypassed server latencies, resulting in **100% operational availability** even in off-grid rural regions.</li>
+              <li><strong>Decreased Firestore Cost:</strong> Pushing minimal change deltas instead of full ledger collections cut Firestore read/write network charges by **72%**.</li>
+            </ul>
+          </div>
+          
+        </main>
+        
+        <!-- Sidebar -->
+        <aside class="cs-sidebar reveal-on-scroll delay-200">
+          
+          <!-- Tech stack widget -->
+          <div class="glass-panel cs-widget">
+            <h3 class="cs-widget-title">Technology Stack</h3>
+            <div class="cs-tech-tags">
+              <span class="cs-tech-tag">Flutter</span>
+              <span class="cs-tech-tag">Dart</span>
+              <span class="cs-tech-tag">SQLite</span>
+              <span class="cs-tech-tag">SQL FTS5</span>
+              <span class="cs-tech-tag">Firebase Firestore</span>
+              <span class="cs-tech-tag">Cloud Functions</span>
+              <span class="cs-tech-tag">Local Storage</span>
+            </div>
+          </div>
+          
+          <!-- Navigation widget -->
+          <div class="glass-panel cs-widget">
+            <h3 class="cs-widget-title">Project Navigation</h3>
+            <div class="cs-nav-box">
+              <a href="scalewealth.html" class="cs-nav-link">
+                <span>Next Case Study: Scalewealth</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="../index.html#products" class="cs-nav-link">
+                <span>View All Products</span>
+                <i class="fas fa-cubes"></i>
+              </a>
+              <a href="../index.html#hero" class="cs-nav-link">
+                <span>Back to Homepage</span>
+                <i class="fas fa-home"></i>
+              </a>
+            </div>
+          </div>
+          
+        </aside>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Back Link -->
+  <footer class="cs-back-footer">
+    <div class="container">
+      <a href="../index.html#case-studies" class="btn btn-primary">
+        <i class="fas fa-arrow-left"></i> Back to Case Studies
+      </a>
+      <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+        &copy; 2026 OLADEVX. Systems Engineered for Scale.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll Back-to-Top Button -->
+  <button class="scroll-top-btn" aria-label="Scroll back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="../js/animations.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
