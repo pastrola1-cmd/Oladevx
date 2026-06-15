@@ -1,5 +1,5 @@
 /* ==========================================================================
-   OLADEVX LIVE TELEMETRY SIMULATOR
+   OLADEVVX LIVE TELEMETRY SIMULATOR
    ========================================================================== */
 
 class TelemetrySimulator {

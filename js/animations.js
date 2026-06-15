@@ -1,5 +1,5 @@
 /* ==========================================================================
-   OLADEVX SCROLL REVEALS & INTERSECTION OBSERVER ANIMATIONS
+   OLADEVVX SCROLL REVEALS & INTERSECTION OBSERVER ANIMATIONS
    ========================================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {

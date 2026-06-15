@@ -1,5 +1,5 @@
 /* ==========================================================================
-   OLADEVX CANVAS PARTICLE BACKGROUND
+   OLADEVVX CANVAS PARTICLE BACKGROUND
    ========================================================================== */
 
 class ParticleSystem {

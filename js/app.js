@@ -1,5 +1,5 @@
 /* ==========================================================================
-   OLADEVX MAIN APPLICATION LOGIC
+   OLADEVVX MAIN APPLICATION LOGIC
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {

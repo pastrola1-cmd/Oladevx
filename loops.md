@@ -1,4 +1,4 @@
-# OLADEVX — Founder OS Loops Playbook
+# OLADEVVX — Founder OS Loops Playbook
 
 This document defines the **Product, Development, and Growth Loops** designed to launch, refine, and scale your brand. Use these 5 loop phases as your execution roadmap.
 
@@ -67,12 +67,12 @@ graph TD
 ---
 
 ## 🔁 Loop 5: The Viral Footprint & Venture Cross-Linking Loop
-*Focus: Setting up organic traffic loops that pull clients back to OLADEVX.*
+*Focus: Setting up organic traffic loops that pull clients back to OLADEVVX.*
 
 1. **Footer Branding**:
    - On every app you launch (Scalewealth, SchoolOS, future fintech solutions), insert a small, premium logo credit in the footer or settings:
-     `Built by OLADEVX` or `Systems Engineered by OLADEVX`.
-   - Link this directly to `oladevx.com`.
+     `Built by OLADEVVX` or `Systems Engineered by OLADEVVX`.
+   - Link this directly to `oladevvx.com`.
 2. **The Inbound Funnel**:
-   - Users of your ventures click the footer credit -> Land on OLADEVX -> See your Founder OS -> Realize you build custom systems -> Contact you to build their SaaS.
+   - Users of your ventures click the footer credit -> Land on OLADEVVX -> See your Founder OS -> Realize you build custom systems -> Contact you to build their SaaS.
    - This creates a closed loop where your products sell your engineering capabilities!
