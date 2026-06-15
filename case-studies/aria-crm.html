@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Case Study: ARIA CRM | OLADEVVX</title>
+  <meta name="description" content="Detailed software architecture and systems engineering case study for ARIA CRM SaaS platform by OLADEVVX.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0b11'/%3E%3Cpath d='M30 30h40v10H40v10h30v10H40v10h30v10H30z' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236c63ff'/%3E%3Cstop offset='100%25' stop-color='%2300d4aa'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/sections.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/case-study.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Trail (Desktop only) -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Ambient Global Background Decorations -->
+  <div class="bg-decorations">
+    <div class="bg-dot-grid"></div>
+    <div class="bg-orb bg-orb-primary animate-orb-1" style="top: 10%; left: -10%;"></div>
+    <div class="bg-orb bg-orb-secondary animate-orb-2" style="top: 50%; right: -10%;"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="../index.html#hero" class="logo">
+        OLADEVVX<span>.</span>
+      </a>
+      
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#products" class="nav-link active">Products</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="https://wa.me/2349067914511?text=Hello%20Oladevvx,%20I'm%20interested%20in%20working%20with%20you!" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">Let's Talk</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="cs-hero">
+    <div class="container">
+      <div class="cs-badge"><i class="fas fa-server"></i> Multi-Tenant SaaS CRM</div>
+      <h1>ARIA CRM Platform Architecture</h1>
+      <p class="reveal-on-scroll delay-100" style="max-width: 800px; font-size: 1.2rem; color: var(--text-secondary);">
+        Architected and deployed a multi-tenant CRM for international education agencies to automate admissions, track student pipelines, and audit application files using Claude API.
+      </p>
+      
+      <div class="cs-meta-grid reveal-on-scroll delay-200">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Client / Organization</span>
+          <span class="cs-meta-value">Global Education Consultancies</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">Lead Systems Architect</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Tech Stack</span>
+          <span class="cs-meta-value">Next.js 14, Supabase RLS, Claude API, Resend, Vercel</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Deployment Year</span>
+          <span class="cs-meta-value">2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Main Content -->
+  <main class="cs-main container">
+    <div class="cs-grid">
+      
+      <!-- Left Column: Narrative -->
+      <div class="cs-content reveal-on-scroll">
+        <section class="cs-section">
+          <h2>The Business Problem</h2>
+          <p>
+            International education agencies process thousands of student visa and university applications every intake. Working across multiple countries, agencies face difficulties coordinating workflows, protecting student personal data, and detecting document fraud or missing credentials in student folders.
+          </p>
+          <p>
+            Legacy tools lacked multi-tenant data isolation and did not offer automated validation for academic transcripts or statements of purpose, requiring hours of manual review.
+          </p>
+        </section>
+        
+        <section class="cs-section">
+          <h2>The Solution: ARIA CRM</h2>
+          <p>
+            Under the OLADEVVX banner, we designed and built ARIA CRM, a modern multi-tenant software system. The platform allows agencies to instantiate their own isolated pipelines, assign tasks to sub-agents, and track student application progress in real-time.
+          </p>
+          <p>
+            We integrated the Claude API to analyze academic transcripts and critique statements of purpose, automatically flagging verification gaps before files are submitted to universities.
+          </p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Technical Architecture</h2>
+          <div class="tech-card" style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.01); border: var(--glass-border); border-radius: 8px;">
+            <h4 style="color: var(--accent-secondary); margin-bottom: 0.75rem;"><i class="fas fa-network-wired"></i> Database Isolation &amp; AI Audits</h4>
+            <ul style="padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+              <li><strong>Supabase RLS Policies</strong>: Multi-tenant security ensuring tenant data separation at the database level.</li>
+              <li><strong>Claude API Integration</strong>: Automated LLM pipelines evaluating student transcripts and suggesting improvements for essays.</li>
+              <li><strong>Resend Email Engine</strong>: Automated notification loops notifying students immediately upon document acceptance or rejection.</li>
+              <li><strong>Next.js 14 App Router</strong>: Server-rendered pipelines with sub-second page transitions.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      
+      <!-- Right Column: Sidebar Stats -->
+      <div class="cs-sidebar reveal-on-scroll delay-200">
+        <div class="glass-panel cs-sidebar-card">
+          <h3>System Metrics</h3>
+          <div class="cs-stat-item">
+            <span class="cs-stat-value">98.4%</span>
+            <span class="cs-stat-label">AI Audit Accuracy</span>
+          </div>
+          <div class="cs-stat-item">
+            <span class="cs-stat-value">&lt; 3.2s</span>
+            <span class="cs-stat-label">Document Review Latency</span>
+          </div>
+          <div class="cs-stat-item">
+            <span class="cs-stat-value">Zero</span>
+            <span class="cs-stat-label">Tenant Data Leaks</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container" style="text-align: center; padding: 3rem 0;">
+      <a href="../index.html#products" class="btn btn-secondary btn-sm">
+        <i class="fas fa-arrow-left"></i> Back to Products
+      </a>
+      <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+        &copy; 2026 OLADEVVX. Systems Engineered for Scale.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/app.js"></script>
+</body>
+</html>

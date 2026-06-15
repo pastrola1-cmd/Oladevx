@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
      11. Interactive Category Filter logic
      ========================================================================== */
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const productCards = document.querySelectorAll('.product-card');
+  const productCards = document.querySelectorAll('.product-carousel .product-card');
 
   if (filterBtns.length > 0 && productCards.length > 0) {
     filterBtns.forEach(btn => {
@@ -616,79 +616,34 @@ func RouteRemittance(txID string, amount float64, phone string) (bool, error) {
   }
 
   /* ==========================================================================
-     14. Sandbox Demo / Code Vault Modal Logic
+     14. Sandbox Demo Request Modal Logic
      ========================================================================== */
   const sandboxModal = document.getElementById('sandbox-modal');
   const modalClose = document.getElementById('sandbox-modal-close');
-  const modalTerminal = document.getElementById('sandbox-modal-terminal');
-  const formContainer = document.getElementById('sandbox-form-container');
   const accessForm = document.getElementById('sandbox-access-form');
-  const requestKeyBtn = document.getElementById('sandbox-request-key');
   const formFeedback = document.getElementById('sandbox-form-feedback');
-  const modalTitle = document.getElementById('sandbox-modal-title');
-  const modalTermTitle = document.getElementById('sandbox-terminal-title');
-  const sandboxKeyInput = document.getElementById('sandbox-key');
-
+  const sandboxProject = document.getElementById('sandbox-project');
   const launchBtns = document.querySelectorAll('.launch-sandbox-btn');
-  const codeBtns = document.querySelectorAll('.request-code-btn');
 
-  if (sandboxModal && modalClose && modalTerminal && formContainer) {
-    
-    const openModal = (projectName, isCodeVault = false) => {
-      // Setup titles
-      if (isCodeVault) {
-        modalTitle.innerHTML = `<i class="fab fa-github"></i> Access Code Vault: ${projectName}`;
-        modalTermTitle.textContent = "vault-auth.sh";
-        sandboxKeyInput.placeholder = "Enter SSH developer token...";
-      } else {
-        modalTitle.innerHTML = `<i class="fas fa-server"></i> Initialize Sandbox: ${projectName}`;
-        modalTermTitle.textContent = "sandbox-init.sh";
-        sandboxKeyInput.placeholder = "Enter API Access Token...";
-      }
-      
-      // Reset feedback and input
+  if (sandboxModal && modalClose && accessForm) {
+    const openModal = (projectName) => {
+      // Reset feedback and form
       formFeedback.innerHTML = "";
-      sandboxKeyInput.value = "";
-      formContainer.style.display = "none";
-      modalTerminal.innerHTML = "";
+      accessForm.reset();
+      
+      // Auto-select the corresponding system of interest
+      if (sandboxProject) {
+        for (let i = 0; i < sandboxProject.options.length; i++) {
+          if (sandboxProject.options[i].value.toLowerCase().includes(projectName.toLowerCase())) {
+            sandboxProject.selectedIndex = i;
+            break;
+          }
+        }
+      }
       
       // Open modal
       sandboxModal.classList.add('open');
       document.body.style.overflow = "hidden"; // Disable scroll
-      
-      // Simulated Boot Log Script
-      const logs = isCodeVault ? [
-        "Resolving secure vault address: keys.github.com...",
-        "Establishing encrypted TLS handshake (SSL_RSA_WITH_AES_256_GCM)...",
-        "Authorizing connection via local client ssh-agent...",
-        "Access Denied: Public key credentials not found.",
-        "Prompting client for secure SSH vault access token..."
-      ] : [
-        "Contacting API gateway and spawning sandboxed demo container...",
-        "Configuring network namespaces: internal bridge IP assigned.",
-        "TLS connection established. SSL attestation: OK.",
-        "Mounting isolated postgresql DB and loading seed datasets...",
-        "System health verification checks: all services reporting healthy.",
-        "Container fully initialized. Awaiting API key validation..."
-      ];
-      
-      let logIndex = 0;
-      const typeLogLine = () => {
-        if (logIndex < logs.length) {
-          const line = document.createElement('div');
-          line.className = 'terminal-line';
-          line.innerHTML = `<span class="terminal-prompt">$</span> ${logs[logIndex]}`;
-          modalTerminal.appendChild(line);
-          modalTerminal.scrollTop = modalTerminal.scrollHeight;
-          logIndex++;
-          setTimeout(typeLogLine, 250);
-        } else {
-          // Finished logging, show form container
-          formContainer.style.display = "block";
-        }
-      };
-      
-      setTimeout(typeLogLine, 100);
     };
 
     const closeModal = () => {
@@ -696,24 +651,16 @@ func RouteRemittance(txID string, amount float64, phone string) (bool, error) {
       document.body.style.overflow = ""; // Restore scroll
     };
 
-    // Wire buttons
+    // Wire trigger buttons
     launchBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        const project = btn.getAttribute('data-project');
-        openModal(project, false);
+        const project = btn.getAttribute('data-project') || "Scalewealth Estate";
+        openModal(project);
       });
     });
 
-    codeBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const project = btn.getAttribute('data-project');
-        openModal(project, true);
-      });
-    });
-
-    // Close on click close button or overlay
+    // Close buttons
     modalClose.addEventListener('click', closeModal);
     sandboxModal.addEventListener('click', (e) => {
       if (e.target === sandboxModal) {
@@ -721,32 +668,84 @@ func RouteRemittance(txID string, amount float64, phone string) (bool, error) {
       }
     });
 
-    // Handle form submit
+    // Form submission
     accessForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      const submitBtn = accessForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
       
-      const key = sandboxKeyInput.value.trim();
-      formFeedback.innerHTML = `<span style="color: var(--text-secondary);"><i class="fas fa-spinner fa-spin"></i> Verifying credentials...</span>`;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending Request... <i class="fas fa-spinner fa-spin"></i>';
       
-      setTimeout(() => {
-        if (key === "DEV_DEMO_2026_OK" || key === "SSH_VAULT_PASS") {
-          formFeedback.innerHTML = `<span style="color: var(--accent-secondary);"><i class="fas fa-check-circle"></i> Verification success. Spawning UI instance... Redirecting to demo gateway.</span>`;
+      const action = accessForm.getAttribute('action');
+      const formData = new FormData(accessForm);
+      const data = {};
+      formData.forEach((value, key) => data[key] = value);
+      
+      fetch(action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (response.ok) {
+          formFeedback.innerHTML = `<span style="color: var(--accent-secondary);"><i class="fas fa-check-circle"></i> Demo request sent successfully! I will reach out shortly.</span>`;
+          submitBtn.innerHTML = 'Sent! <i class="fas fa-check"></i>';
+          accessForm.reset();
           setTimeout(() => {
             closeModal();
-            alert("Demo Sandbox connection established! Redirecting to secure sandbox environment.");
-          }, 1500);
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+            formFeedback.innerHTML = "";
+          }, 2000);
         } else {
-          formFeedback.innerHTML = `<span style="color: #ef4444;"><i class="fas fa-exclamation-triangle"></i> Verification Failed. Access token rejected by gateway.</span>`;
+          throw new Error('Submission failed');
         }
-      }, 1000);
+      })
+      .catch(error => {
+        formFeedback.innerHTML = `<span style="color: #ef4444;"><i class="fas fa-exclamation-triangle"></i> Error sending request. Please try again.</span>`;
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      });
     });
+  }
 
-    // Generate mock token
-    requestKeyBtn.addEventListener('click', () => {
-      const isCode = modalTermTitle.textContent === "vault-auth.sh";
-      const token = isCode ? "SSH_VAULT_PASS" : "DEV_DEMO_2026_OK";
-      sandboxKeyInput.value = token;
-      formFeedback.innerHTML = `<span style="color: var(--accent-secondary);"><i class="fas fa-key"></i> Key retrieved: ${token}. Click Verify to launch.</span>`;
-    });
+  /* ==========================================================================
+     15. Stats Counter Animation
+     ========================================================================== */
+  const statNumbers = document.querySelectorAll('.stat-number');
+  if (statNumbers.length > 0) {
+    const animateStats = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseFloat(el.getAttribute('data-target'));
+          const suffix = el.getAttribute('data-suffix') || '';
+          const duration = 1500; // ms
+          const stepTime = 30; // ms
+          const steps = duration / stepTime;
+          let currentStep = 0;
+          
+          const timer = setInterval(() => {
+            currentStep++;
+            const val = Math.min(Math.round((currentStep / steps) * target), target);
+            el.textContent = val + suffix;
+            
+            if (currentStep >= steps) {
+              clearInterval(timer);
+              el.textContent = target + suffix;
+            }
+          }, stepTime);
+          
+          observer.unobserve(el);
+        }
+      });
+    };
+    
+    const statsObserver = new IntersectionObserver(animateStats, { threshold: 0.1 });
+    statNumbers.forEach(num => statsObserver.observe(num));
   }
 });
