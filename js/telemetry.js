@@ -99,16 +99,16 @@ class TelemetrySimulator {
     this.setTextContent('sos-cpu', sosCpu + '%');
     this.drawSparkline('sos-sparkline', this.history.schoolos, '#00d4aa');
 
-    // 3. Vyza Stats
-    const vyzaUsers = this.getRandomValue(2180, 40);
-    const vyzaLatency = this.getRandomValue(72, 8);
-    const vyzaCpu = this.getRandomValue(44, 5);
+    // 3. Vyza Stats (AI response times and accuracy)
+    const vyzaUsers = this.getRandomValue(2450, 50);
+    const vyzaLatency = this.getRandomValue(195, 15);
+    const vyzaCpu = this.getRandomValue(98, 1); // Represents AI Accuracy %
     this.history.vyza.shift();
     this.history.vyza.push(vyzaCpu);
     
     this.setTextContent('vyza-users', vyzaUsers);
     this.setTextContent('vyza-latency', vyzaLatency + 'ms');
-    this.setTextContent('vyza-cpu', vyzaCpu + '%');
+    this.setTextContent('vyza-cpu', vyzaCpu + '.8%');
     this.drawSparkline('vyza-sparkline', this.history.vyza, '#6c63ff');
 
     // 4. Manna Bible App Stats
